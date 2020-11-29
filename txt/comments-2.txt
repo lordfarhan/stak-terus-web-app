@@ -1,0 +1,3 @@
+Farhan - <pre>int x = 5 * 4;</pre>
+Farhan - <p>You missed the semicolon, then it should be like this</p>
+<pre>int x = 5 * 4;</pre>
