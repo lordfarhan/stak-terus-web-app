@@ -9,9 +9,9 @@
 	<!-- Content Row -->
 	<div class="row">
 		<div class="col-md-12">
-			<form action="<?php echo base_url('question/updateReply') ?>" method="post">
+			<form action="<?php echo base_url('post/updateReply') ?>" method="post">
         <input type="hidden" value="<?php echo $reply['id']; ?>" name="id">
-        <input type="hidden" value="<?php echo $reply['question_id']; ?>" name="question_id">
+        <input type="hidden" value="<?php echo $reply['post_id']; ?>" name="post_id">
 				<div class="form-group">
 					<textarea type="text" id="body" name="reply" placeholder="Reply" class="form-control form-control-user"><?php echo $reply['reply']; ?></textarea>
 					<?php echo form_error('reply', '<small class="text-danger pl-3">', '</small>'); ?>
