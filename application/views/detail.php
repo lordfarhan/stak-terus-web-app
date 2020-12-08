@@ -7,7 +7,7 @@
     <?php if ($post['name'] == $user['name']) { ?>
     <div class="row mb-4">
       <a href="<?php echo base_url('post/edit/') . $post['id']?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm mr-2"><i class="fas fa-pen fa-sm text-white-50"></i> Edit</a>
-      <a href="<?php echo base_url('post/delete/') . $post['id']?>" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i class="fas fa-trash fa-sm text-white-50"></i> Delete</a>
+      <a onclick="return confirm('Are you sure?');" href="<?php echo base_url('post/delete/') . $post['id']?>" class="mr-3 d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i class="fas fa-trash fa-sm text-white-50"></i> Delete</a>
     </div>
     <?php } ?>
   </div>
@@ -28,7 +28,7 @@
             <?php if ($reply->name == $user['name']) { ?>
             <div class="row">
               <a href="<?php echo base_url('post/editReply/') . $reply->id?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm mr-2"><i class="fas fa-pen fa-sm text-white-50"></i> Edit</a>
-              <a href="<?php echo base_url('post/deleteReply/') . $reply->id?>" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i class="fas fa-trash fa-sm text-white-50"></i> Delete</a>
+              <a onclick="return confirm('Are you sure?');" href="<?php echo base_url('post/deleteReply/') . $reply->id?>" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm"><i class="fas fa-trash fa-sm text-white-50"></i> Delete</a>
             </div>
             <?php } ?>
 					</div>
