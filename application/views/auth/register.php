@@ -35,6 +35,17 @@
 									<?php echo form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
 								</div>
 							</div>
+							<label class="ml-3" for="">Describe who you are?</label>
+							<div class="ml-3 form-group row">
+								<div class="custom-control custom-radio">
+										<input class="custom-control-input" checked id="role_user" value="0" type="radio" name="role">
+										<label class="custom-control-label" for="role_user">User</label>
+								</div>
+								<div class="ml-3 custom-control custom-radio">
+										<input class="custom-control-input" id="role_programmer" value="1" type="radio" name="role">
+										<label class="custom-control-label" for="role_programmer">Programmer</label>
+								</div>
+							</div>
 							<button type="submit" class="btn btn-primary btn-user btn-block">
 								Register Account
 							</button>

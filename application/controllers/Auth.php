@@ -69,6 +69,7 @@ class Auth extends CI_Controller
         'name' => $this->input->post('name'),
         'email' => $this->input->post('email'),
         'password' => md5($this->input->post('password')),
+        'role' => $this->input->post('role'),
       );
       $this->db->insert('users', $data);
       $this->session->set_flashdata('message', '<div class="alert alert-primary" role="alert">Registered Successfully. Please Sign In</div>');
