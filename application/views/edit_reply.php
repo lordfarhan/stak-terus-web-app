@@ -13,7 +13,7 @@
         <input type="hidden" value="<?php echo $reply['id']; ?>" name="id">
         <input type="hidden" value="<?php echo $reply['post_id']; ?>" name="post_id">
 				<div class="form-group">
-					<textarea type="text" id="body" name="reply" placeholder="Reply" class="form-control form-control-user"><?php echo $reply['reply']; ?></textarea>
+					<textarea type="text" id="reply" name="reply" placeholder="Reply" class="form-control form-control-user"><?php echo $reply['reply']; ?></textarea>
 					<?php echo form_error('reply', '<small class="text-danger pl-3">', '</small>'); ?>
 				</div>
 				<button class="btn btn-primary btn-user btn-block" type="submit">Update</button>

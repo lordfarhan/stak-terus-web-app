@@ -47,7 +47,8 @@
 				<input type="hidden" name="user_id" value="<?php echo $user['id'] ?>">
 				<input type="hidden" name="post_id" value="<?php echo $post['id'] ?>">
 				<div class="form-group">
-          <textarea type="text" id="body" name="reply" placeholder="Reply here" class="form-control form-control-user"></textarea>
+					<textarea type="text" id="reply" name="reply" placeholder="Reply here" class="form-control form-control-user"></textarea>
+					<?php echo form_error('reply', '<small class="text-danger pl-3">', '</small>'); ?>
 				</div>
 				<button class="btn btn-primary btn-user btn-block" type="submit">Reply</button>
 			</form>

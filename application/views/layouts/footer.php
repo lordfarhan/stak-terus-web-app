@@ -18,6 +18,7 @@
 
   <script type='text/javascript'> 
     tinymce.init({ selector:'#body', menubar:'', theme: 'modern'});
+    tinymce.init({ selector:'#reply', menubar:'', theme: 'modern'});
   </script>
   </body>
 </html>
