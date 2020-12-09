@@ -25,13 +25,13 @@ class Reply_model extends CI_Model
   // Method to get post by id
   public function get($id)
   {
-    return $this->db->select('replies.id, replies.post_id, replies.reply, replies.created_at, replies.updated_at')->from('replies')->where(array('replies.id' => $id))->get()->row_array();
+    return $this->db->select('replies.id, replies.user_id, replies.post_id, replies.reply, replies.created_at, replies.updated_at')->from('replies')->where(array('replies.id' => $id))->get()->row_array();
   }
 
   // Get commment by post_id
   public function getAll($id)
   {
-    $this->db->select('replies.id, replies.post_id, replies.reply, replies.created_at, users.name');
+    $this->db->select('replies.id, replies.user_id, replies.post_id, replies.reply, replies.created_at, users.name');
     $this->db->from('users');
     $this->db->join('replies', 'users.id = replies.user_id');
     $this->db->where(array('replies.post_id' => $id));
