@@ -60,6 +60,9 @@ class Post extends CI_Controller
 	public function create()
 	{
 		$this->sessionIsSet();
+		if($this->getSession()['role'] != 1) {
+			return redirect(base_url('post'));
+		}
 
 		$data['title'] = 'Dashboard | Post Post';
 		$data['user'] = $this->getSession();
